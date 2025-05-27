@@ -1,0 +1,11 @@
+{
+  "appId": "grow-marketing",
+  "productName": "Grow Marketing",
+  "files": ["src/**", "browser/**"],
+  "win": {
+    "target": "nsis"
+  },
+  "mac": {
+    "target": "dmg"
+  }
+}

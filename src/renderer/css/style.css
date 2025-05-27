@@ -1,0 +1,10 @@
+input[type="range"][orient="vertical"] {
+  margin-top: 130%;
+  margin-left: -110%;
+  transform: rotate(270deg);
+  width: 300%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}

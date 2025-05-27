@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap5.3.3.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Grow Marketing</title>
+</head>
+
+<body style="overflow-x: hidden;">
+    <div class="container pb-2 position-relative" style="max-width: 450px;">
+        <div class="form-floating mt-1">
+            <input type="text" class="form-control" id="websiteUrl" placeholder="Website Url" value="https://zoho.com, ">
+            <label for="websiteUrl" class="form-label">Website URL</label>
+        </div>
+        <div class="row mt-2 gx-2">
+            <div class="col">
+                <div class="form-floating">
+                    <select class="form-select" aria-label="Pages per session" id="pagesPerSession">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <label for="websiteUrl" class="form-label">Pages per session</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <select class="form-select" aria-label="Average session duration" id="averageSessionDuration">
+                        <option value="1" selected>1 minute</option>
+                        <option value="2">2 minutes</option>
+                        <option value="3">3 minutes</option>
+                        <option value="4">4 minutes</option>
+                    </select>
+                    <label for="websiteUrl" class="form-label">Average session duration</label>
+                </div>
+            </div>
+        </div>
+        <div class="mt-2">
+            <label for="mobileSessionRate" class="form-label mb-0">
+                <span class="mr-2">Mobile sessions rate:</span>
+                <span id="mobileSessionRateLabel">50 %</span>
+            </label>
+            <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="mobileSessionRate">
+        </div>
+        <div class="mt-1">
+            <label for="bounceRate" class="form-label mb-0">
+                <span class="mr-2">Bounce rate:</span>
+                <span id="bounceRateLabel">50 %</span>
+            </label>
+            <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="bounceRate">
+        </div>
+        <div class="mt-1">
+            <label for="scrollDepth" class="form-label mb-0">
+                <span class="mr-2">Scroll depth:</span>
+                <span id="scrollDepthLabel">50 %</span>
+            </label>
+            <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="scrollDepth">
+        </div>
+        <div class="mt-1">
+            <label>Traffic during the week</label>
+            <div class="row" style="height: 190px;">
+                <div class="col">                    
+                    <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="monday" orient="vertical">
+                    <label for="monday" class="form-label mt-5">
+                        <div>Mon</div>
+                        <div id="mondayLabel">50%</div>
+                    </label>
+                </div>
+                <div class="col">
+                    <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="tuesday" orient="vertical">
+                    <label for="tuesday" class="form-label mt-5">
+                        <div>Tue</div>
+                        <div id="tuesdayLabel">50%</div>
+                    </label>
+                </div>
+                <div class="col">
+                    <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="wednesday" orient="vertical">
+                    <label for="wednesday" class="form-label mt-5">
+                        <div>Wed</div>
+                        <div id="wednesdayLabel">50%</div>
+                    </label>
+                </div>
+                <div class="col">
+                    <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="thursday" orient="vertical">
+                    <label for="thursday" class="form-label mt-5">
+                        <div>Thu</div>
+                        <div id="thursdayLabel">50%</div>
+                    </label>
+                </div>
+                <div class="col">
+                    <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="friday" orient="vertical">
+                    <label for="friday" class="form-label mt-5">
+                        <div>Fri</div>
+                        <div id="fridayLabel">50%</div>
+                    </label>
+                </div>
+                <div class="col">
+                    <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="saturday" orient="vertical">
+                    <label for="saturday" class="form-label mt-5">
+                        <div>Sat</div>
+                        <div id="saturdayLabel">50%</div>
+                    </label>
+                </div>
+                <div class="col">
+                    <input type="range" class="form-range" min="0" max="100" step="1" value="50" id="sunday" orient="vertical">
+                    <label for="sunday" class="form-label mt-5">
+                        <div>Sun</div>
+                        <div id="sundayLabel">50%</div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <label>Add the keywords</label>
+        <form class="row g-2 align-items-center" id="keywordsForm">
+            <div class="col-7">
+                <input type="text" class="form-control" id="keyword" placeholder="Write keyword" required>
+            </div>
+            <div class="col-3">
+                <input type="number" class="form-control" id="clicksPerDay" placeholder="Clicks per day" required>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+        </form>
+        <div class="mt-2 g-2" id="keywordsList">
+            <div class="badge rounded-pill bg-primary">
+                html <i class="bi bi-x-circle-fill" role="button"></i>
+            </div>
+        </div>
+        <hr/>
+        <div class="d-grid mt-2">
+            <button type="button" class="btn btn-primary btn-full" id="startProject">Run project</button>
+        </div>
+        <div class="toast position-absolute top-0 end-0 z-2 bg-danger" id="undetectableAlert">
+            <div class="toast-header">
+              <strong class="me-auto">Please run Undetectable app first!</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap5.3.3.js"></script>
+<script src="./renderer.js"></script>
+
+</html>
